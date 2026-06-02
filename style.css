@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    color: aliceblue;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+body::selection {
+    background-color: aliceblue;
+    color: black;
+}
+
+p {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.div {
+    height: 95vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+input {
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    color: aliceblue;
+}
+input:focus {
+    outline: none;
+}
+
+.green {
+    color: rgb(47, 213, 47);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#directory {
+    color: rgb(47, 213, 47);
+}
+
+#input-div {
+    display: flex;
+}

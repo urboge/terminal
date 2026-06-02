@@ -4,7 +4,9 @@ let directory = document.getElementById("directory");
 
 input.focus();
 
-directory.innerText = "tkwebos@user" + ":~$ "
+let directoryName = "tkwebos@user"
+
+directory.innerText = directoryName + ":~$ "
 
 p.onclick = function() {
    input.focus(); 
@@ -19,7 +21,7 @@ function react(command) {
 }
 
 function add(text) {
-    p.innerHTML = p.innerHTML + "<p>" + "<span class='green'>timurs@timurs~:$ </span>" + text + "</p>";
+    p.innerHTML = p.innerHTML + "<p>" + "<span class='green'>"+ directoryName +"~:$ </span>" + text + "</p>";
 }
 
 function enter() {

@@ -1,35 +1,35 @@
 let p = document.getElementById("terminal-p");
-let input = document.getElementById("terminal-input");
-let directory = document.getElementById("directory");
+let inputTerminal = document.getElementById("terminal-input");
+let directoryTerminal = document.getElementById("directory");
 
-input.focus();
+inputTerminal.focus();
 
-let directoryName = "tkwebos@user"
+let directoryTerminalName = "tkwebos@user"
 
-directory.innerText = directoryName + ":~$ "
+directoryTerminal.innerText = directoryTerminalName + ":~$ "
 
 p.onclick = function() {
-   input.focus(); 
+   inputTerminal.focus(); 
 };
 
 function react(command) {
     if (command === "ls") {
-        add("no directory found")
+        add("no directoryTerminal found")
     } else if (command === "nano") {
         add("nano created")
     }
 }
 
 function add(text) {
-    p.innerHTML = p.innerHTML + "<p>" + "<span class='green'>"+ directoryName +"~:$ </span>" + text + "</p>";
+    p.innerHTML = p.innerHTML + "<p>" + "<span class='green'>"+ directoryTerminalName +"~:$ </span>" + text + "</p>";
 }
 
 function enter() {
-    let inputValue = input.value;
+    let inputValue = inputTerminal.value;
     console.log(inputValue);
     add(inputValue);
     react(inputValue);
-    input.value = ""
+    inputTerminal.value = ""
 }
 
 document.addEventListener("keydown", function (event) {
